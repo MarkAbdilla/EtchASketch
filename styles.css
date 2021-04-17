@@ -1,8 +1,9 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
-    justify-content: center;
+    max-width: 500px;
+    min-height: 500px;
+    margin: 2rem auto;
+    border: 2px solid var(--border);
 }
 
 .grid-box {
@@ -10,10 +11,17 @@
     border-width: 1px;
 }
 
-/*.grid-box:hover {
-    background-color: red;
-}*/
-
 h1 {
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+    padding-top: 30px;
+}
+
+#btn {
     text-align: center;
 }
