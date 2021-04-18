@@ -1,9 +1,14 @@
+html {
+    background-color: burlywood;
+}
+
 .container {
     display: grid;
     max-width: 500px;
     min-height: 500px;
     margin: 2rem auto;
     border: 2px solid var(--border);
+    background: cornsilk;
 }
 
 .grid-box {
@@ -13,6 +18,7 @@
 
 h1 {
     text-align: center;
+    border: 3px dotted;
 }
 
 .btn-container {
