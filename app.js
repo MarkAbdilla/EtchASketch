@@ -1,6 +1,8 @@
 const gridContainer = document.querySelector('.container');
 const gridButton = document.getElementById('btn');
 
+let gridColour = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+
 window.addEventListener('load', DefaultGrid);
 
 gridButton.addEventListener('click', changeGridSize);
@@ -20,7 +22,6 @@ function fillGrid(size) {
         const div = document.createElement('div');
         div.className = 'grid-box';
         div.addEventListener('mouseover', changeColour);
-        div.addEventListener('mouseout', revertColour);
         gridContainer.appendChild(div);
     }
 }
@@ -52,11 +53,9 @@ function clearGrid() {
 
 function changeColour(e)
 {
-    e.target.style.backgroundColor = "black";
+    let r = gridColour(0, 255);
+    let g = gridColour(0, 255);
+    let b = gridColour(0, 255);
+    let rgb = `rgb(${r}, ${g}, ${b})`;
+    e.target.style.backgroundColor = rgb;
 }
-
-function revertColour(e)
-{
-    e.target.style.backgroundColor = "white";
-}
-
